@@ -241,23 +241,140 @@ body {
     color: var(--magenta);
 }
 
-.cardBox .card .cardName{
+.cardBox .card .cardName {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 10px;
 }
 
-.cardBox .card .iconBox{
+.cardBox .card .iconBox {
     font-size: 3.5em;
     color: var(--black2);
 }
 
-.cardBox .card:hover{
+.cardBox .card:hover {
     background: var(--magenta);
 }
 
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBox{
+.cardBox .card:hover .iconBox {
     color: var(--white);
+}
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+.details .recent-orders {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header h2 {
+    font-weight: 600;
+    color: var(--magenta);
+}
+
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--magenta);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .recent-orders table tr {
+    color: var(--black);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 500ms ease-in-out;
+}
+
+.details .recent-orders table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recent-orders table tbody tr:hover {
+    background: var(--magenta);
+    color: var(--white);
+}
+
+.details .recent-orders table tr td {
+    padding: 10px;
+}
+
+.details .recent-orders table tr td:last-child {
+    text-align: end;
+}
+
+.details .recent-orders table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .recent-orders table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.delivered {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.pending {
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.return {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.in-progress {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }
